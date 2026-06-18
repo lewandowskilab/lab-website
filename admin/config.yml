@@ -8,7 +8,7 @@
 # ---------- 后端：内容存到哪个 GitHub 仓库 ----------
 backend:
   name: github
-  repo: YOUR-USERNAME/YOUR-REPO   # ★必改：换成你的「用户名/仓库名」，转移到实验室账号后也改这里
+  repo: Yangfan9606/lab-website   # ★必改：换成你的「用户名/仓库名」，转移到实验室账号后也改这里
   branch: main                    # 编辑保存到 main 分支；GitHub Actions 会自动构建并发布到 gh-pages
   # base_url: https://YOUR-AUTH-WORKER.workers.dev   # ★认证中转地址（见《CMS-使用与运维.md》第3节）
 
