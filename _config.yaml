@@ -1,19 +1,19 @@
 # site properties and page defaults
-title: Yangfan9606
-subtitle: 
-description: An engaging 1-3 sentence description of your lab.
+title: Lab Website Template
+subtitle: by the Greene Lab
+description: An easy-to-use, flexible website template for labs, with automatic citations, GitHub tag imports, pre-built components, and more.
 header: images/background.jpg
 footer: images/background.jpg
 proofer: false
 
 # site social media and other links
 links:
-  email: contact@Yangfan9606.com
+  email: contact@your-lab.com
   orcid: 0000-0001-8713-9213
   google-scholar: ETJoidYAAAAJ
-  github: Yangfan9606
-  twitter: Yangfan9606
-  youtube: Yangfan9606
+  github: your-lab
+  twitter: YourLabHandle
+  youtube: YourLabChannel
 
 ### jekyll settings
 
@@ -42,6 +42,9 @@ collections:
   # generate page for each post
   posts:
     output: true
+  # projects shown on the Projects page (no individual pages needed)
+  projects:
+    output: false
 
 # jekyll plugins
 plugins:
