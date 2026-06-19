@@ -27,6 +27,9 @@ nav:
   tooltip=site.data.content.contact.address_tooltip
   link=site.data.content.contact.address_link
 %}
+{% for b in site.data.content.contact.extra_buttons %}
+{% include button.html type=b.type text=b.text link=b.link %}
+{% endfor %}
 
 {% include section.html %}
 
