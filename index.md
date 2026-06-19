@@ -95,14 +95,15 @@
 {% include section.html %}
 
 {% comment %} Same photo wall as the Team page (one row + More). Edited under Pages -> Team. {% endcomment %}
+{% assign pmax = site.data.content.team.photos_max | plus: 0 %}
 {%
   include photo-row.html
   photos=site.data.content.team.figures
-  limit=site.data.content.team.photos_max
+  limit=pmax
   id="home"
 %}
 
-{% if site.data.content.team.figures.size > site.data.content.team.photos_max %}
+{% if site.data.content.team.figures.size > pmax %}
 {%
   include button.html
   link="photos"

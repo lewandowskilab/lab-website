@@ -23,15 +23,16 @@ nav:
 
 ## {{ site.data.content.research.videos_heading }}
 
+{% assign vmax = site.data.content.research.videos_max | plus: 0 %}
 {%
   include video-row.html
   videos=site.data.content.research.videos
-  limit=site.data.content.research.videos_max
+  limit=vmax
   width=site.data.content.research.videos_size
   id="research"
 %}
 
-{% if site.data.content.research.videos.size > site.data.content.research.videos_max %}
+{% if site.data.content.research.videos.size > vmax %}
 {%
   include button.html
   link="videos"
