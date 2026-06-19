@@ -1,18 +1,18 @@
+# Contact page. Edited via admin -> Pages -> "Contact".
+# Templates read {{ site.data.content.contact.* }}
 intro: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 email: jane@smith.com
 phone_text: (555) 867-5309
-phone_link: +1-555-867-5309
+phone_link: "+1-555-867-5309"
 address_tooltip: Our location on Google Maps for easy navigation
 address_link: https://www.google.com/maps
-extra_buttons:
-  - type: linkedin
-    text: asdwqe
-    link: aaadasdc
+# Extra buttons next to email/phone/address. Add as many as you like.
+# type picks the icon (website, twitter, github, linkedin, email, phone, ...).
+extra_buttons: []
+# Photos - add as many as you like; they wrap into a grid automatically.
 figures:
-  - image: images/photo.jpg
-    caption: Lorem ipsum
-  - image: images/photo.jpg
-    caption: Lorem ipsum
+  - { image: images/photo.jpg, caption: Lorem ipsum }
+  - { image: images/photo.jpg, caption: Lorem ipsum }
 col1: Lorem ipsum dolor sit amet
 col2: consectetur adipiscing elit
 col3: sed do eiusmod tempor

@@ -1,5 +1,8 @@
 # Main page (home). Edited via admin -> Pages -> "Main page".
 # Templates read these as {{ site.data.content.home.* }}
+# Optional: a banner image just for the home page top (overrides the site-wide
+# Top banner from Site settings). Leave blank to use the site-wide one.
+banner: ""
 title: Lab Website Template
 intro: An easy-to-use, flexible website template for labs. Spend less time managing a website and citations, and more time running your lab.
 
