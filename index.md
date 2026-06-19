@@ -1,9 +1,21 @@
 ---
 ---
 
-# Yangfan9606's Website
+# {{ site.data.content.home.title }}
 
-An engaging 1-3 sentence description of your lab.
+{{ site.data.content.home.intro }}
+
+{%
+  include button.html
+  type="docs"
+  link="https://greene-lab.gitbook.io/lab-website-template-docs"
+%}
+{%
+  include button.html
+  type="github"
+  text="On GitHub"
+  link="greenelab/lab-website-template"
+%}
 
 {% include section.html %}
 
@@ -11,12 +23,12 @@ An engaging 1-3 sentence description of your lab.
 
 {% capture text %}
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+{{ site.data.content.home.feature1_text }}
 
 {%
   include button.html
   link="research"
-  text="See our publications"
+  text=site.data.content.home.feature1_button
   icon="fa-solid fa-arrow-right"
   flip=true
   style="bare"
@@ -26,20 +38,20 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 {%
   include feature.html
-  image="images/photo.jpg"
+  image=site.data.content.home.feature1_image
   link="research"
-  title="Our Research"
+  title=site.data.content.home.feature1_title
   text=text
 %}
 
 {% capture text %}
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+{{ site.data.content.home.feature2_text }}
 
 {%
   include button.html
   link="projects"
-  text="Browse our projects"
+  text=site.data.content.home.feature2_button
   icon="fa-solid fa-arrow-right"
   flip=true
   style="bare"
@@ -49,9 +61,9 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 {%
   include feature.html
-  image="images/photo.jpg"
+  image=site.data.content.home.feature2_image
   link="projects"
-  title="Our Projects"
+  title=site.data.content.home.feature2_title
   flip=true
   style="bare"
   text=text
@@ -59,12 +71,12 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 {% capture text %}
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+{{ site.data.content.home.feature3_text }}
 
 {%
   include button.html
   link="team"
-  text="Meet our team"
+  text=site.data.content.home.feature3_button
   icon="fa-solid fa-arrow-right"
   flip=true
   style="bare"
@@ -74,8 +86,8 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 {%
   include feature.html
-  image="images/photo.jpg"
+  image=site.data.content.home.feature3_image
   link="team"
-  title="Our Team"
+  title=site.data.content.home.feature3_title
   text=text
 %}
