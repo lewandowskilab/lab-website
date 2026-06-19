@@ -9,4 +9,5 @@ title: Videos
   videos=site.data.content.research.videos
   width=site.data.content.research.videos_size
   id="allvideos"
+  mode="grid"
 %}

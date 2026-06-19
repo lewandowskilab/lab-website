@@ -8,4 +8,5 @@ title: Photos
   include photo-row.html
   photos=site.data.content.team.figures
   id="allphotos"
+  mode="grid"
 %}
