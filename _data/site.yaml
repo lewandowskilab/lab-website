@@ -18,6 +18,10 @@ footer_image: images/background.jpg
 page_background: images/background.jpg
 page_panel_opacity: 0.85   # 0.92 = image faint, 0.85 = medium, 0.72 = image prominent
 
+# How many auto-imported (ORCID) papers to list on each member's page
+# before linking out to their full ORCID profile.
+member_publications_max: 5
+
 # Social / contact links shown in the footer. Leave a value blank to hide that icon.
 links:
   email: contact@your-lab.com
