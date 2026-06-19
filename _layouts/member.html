@@ -27,6 +27,36 @@ layout: default
 
 {{ content }}
 
+{% comment %}
+  This person's publications, auto-imported from their ORCID profile.
+  Shows only if their ORCID is (a) listed in admin -> Auto-import (ORCID)
+  so the papers get fetched, and (b) set in this member's Known links.
+  Capped at "member_publications_max" (Site settings); the rest link out.
+{% endcomment %}
+{% assign my_orcid = page.links.orcid %}
+{% if my_orcid and my_orcid != "" %}
+  {% assign my_papers = site.data.citations
+    | where: "orcid", my_orcid
+    | sort: "date"
+    | reverse
+  %}
+  {% if my_papers.size > 0 %}
+    {% assign pubmax = site.data.site.member_publications_max | default: 5 | plus: 0 %}
+    <h2 id="publications">Recent publications</h2>
+    {% for paper in my_papers limit: pubmax %}
+      {% include citation.html lookup=paper.id %}
+    {% endfor %}
+    {% if my_papers.size > pubmax %}
+      <p class="center">
+        <a href="https://orcid.org/{{ my_orcid }}">
+          See all {{ my_papers.size }} publications on ORCID
+          {% include icon.html icon="fa-solid fa-arrow-right" %}
+        </a>
+      </p>
+    {% endif %}
+  {% endif %}
+{% endif %}
+
 {% assign aliases = page.aliases
   | default: page.name
   | default: page.title
