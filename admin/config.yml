@@ -62,6 +62,16 @@ collections:
             field: { name: paper, label: 'Title or DOI', widget: string }
           - { name: all_heading, label: 'Heading above the full publication list', widget: string }
           - { name: videos_heading, label: 'Heading for the talks/videos section', widget: string }
+          - { name: videos_max, label: 'How many videos to show here (rest go to a More page)', widget: number, value_type: int, default: 6, min: 1 }
+          - name: videos_size
+            label: 'Video size'
+            widget: select
+            default: 480px
+            options:
+              - { label: 'Small', value: 360px }
+              - { label: 'Medium', value: 480px }
+              - { label: 'Large', value: 720px }
+            hint: 'Width of each video. For a custom width, type any CSS value (e.g. 550px) directly in _data/content/research.yaml.'
           - name: videos
             label: 'Talks & videos (YouTube)'
             widget: list
@@ -83,8 +93,9 @@ collections:
         fields:
           - { name: intro, label: Intro paragraph, widget: text }
           - { name: band,  label: 'Mid-page band paragraph', widget: text }
+          - { name: photos_max, label: 'How many photos to show in the row (rest go to a More page)', widget: number, value_type: int, default: 6, min: 1 }
           - name: figures
-            label: 'Bottom photos (add as many as you like)'
+            label: 'Photo wall (add as many as you like)'
             widget: list
             required: false
             field: { name: image, label: Photo, widget: image }
