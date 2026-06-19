@@ -51,6 +51,14 @@ for plugin in plugins:
         # load data from file
         try:
             data = load_data(file)
+            # allow a CMS-friendly wrapper so the visual admin can manage a
+            # list: a file that is a mapping with a single list value
+            # (e.g. {list: [...]}) is unwrapped to that list. A mapping with
+            # no list value (e.g. an emptied-out list) is treated as empty.
+            # Plain root-level lists (the original format) are used unchanged.
+            if isinstance(data, dict):
+                list_values = [v for v in data.values() if isinstance(v, list)]
+                data = list_values[0] if list_values else []
             # check if file in correct format
             if not list_of_dicts(data):
                 raise Exception(f"{file.name} data file not a list of dicts")
