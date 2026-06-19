@@ -2,7 +2,7 @@
 #  Sveltia CMS configuration
 #  Defines what the visual admin (/admin) can edit and which form
 #  fields each section exposes. The CMS only writes fields it knows
-#  about, so each section's fields must match the underlying file
+#  about, so each file's fields must match the underlying file
 #  exactly, or unlisted data would be stripped on save.
 # =============================================================
 
@@ -20,15 +20,15 @@ locale: en
 collections:
 
   # ====================================================================
-  #  PAGE CONTENT - one section per page. Each edits its own data file
-  #  under _data/content/. The page templates read these via Liquid, so
-  #  layout stays locked in the templates and can't be broken here.
+  #  PAGES - one "Pages" section in the sidebar; the 6 pages appear as a
+  #  list on the right. Each edits its own data file under _data/content/.
+  #  The page templates read these via Liquid, so layout stays locked.
   # ====================================================================
-
-  # ---------- Main page -> _data/content/home.yaml ----------
-  - name: page-home
-    label: 'Main page'
+  - name: pages
+    label: Pages
+    label_singular: Page
     files:
+
       - name: home
         label: 'Main page'
         file: _data/content/home.yaml
@@ -48,55 +48,36 @@ collections:
           - { name: feature3_button, label: 'Panel 3 - button label', widget: string }
           - { name: feature3_image,  label: 'Panel 3 - image',  widget: image }
 
-  # ---------- Research -> _data/content/research.yaml ----------
-  - name: page-research
-    label: 'Research page'
-    files:
       - name: research
         label: 'Research page'
         file: _data/content/research.yaml
         fields:
           - { name: intro, label: Intro paragraph, widget: text }
 
-  # ---------- Projects -> _data/content/projects.yaml ----------
-  - name: page-projects
-    label: 'Projects page'
-    files:
       - name: projects
         label: 'Projects page'
         file: _data/content/projects.yaml
         fields:
           - { name: intro, label: Intro paragraph, widget: text }
 
-  # ---------- Team -> _data/content/team.yaml ----------
-  - name: page-team
-    label: 'Team page'
-    files:
       - name: team
         label: 'Team page'
         file: _data/content/team.yaml
         fields:
           - { name: intro, label: Intro paragraph, widget: text }
           - { name: band,  label: 'Mid-page band paragraph', widget: text }
-          - { name: figure1_image, label: 'Photo 1', widget: image }
-          - { name: figure2_image, label: 'Photo 2', widget: image }
-          - { name: figure3_image, label: 'Photo 3', widget: image }
+          - name: figures
+            label: 'Bottom photos (add as many as you like)'
+            widget: list
+            required: false
+            field: { name: image, label: Photo, widget: image }
 
-  # ---------- Blog (page intro) -> _data/content/blog.yaml ----------
-  # (Individual posts are the "Blog posts" section further below.)
-  - name: page-blog
-    label: 'Blog page'
-    files:
       - name: blog
         label: 'Blog page'
         file: _data/content/blog.yaml
         fields:
           - { name: intro, label: Intro paragraph, widget: text }
 
-  # ---------- Contact -> _data/content/contact.yaml ----------
-  - name: page-contact
-    label: 'Contact page'
-    files:
       - name: contact
         label: 'Contact page'
         file: _data/content/contact.yaml
@@ -107,19 +88,20 @@ collections:
           - { name: phone_link,      label: 'Phone (dial link, e.g. +1-555-...)', widget: string }
           - { name: address_tooltip, label: 'Address tooltip', widget: string }
           - { name: address_link,    label: 'Map / address link', widget: string }
-          - { name: figure1_image,   label: 'Photo 1', widget: image }
-          - { name: figure1_caption, label: 'Photo 1 caption', widget: string, required: false }
-          - { name: figure2_image,   label: 'Photo 2', widget: image }
-          - { name: figure2_caption, label: 'Photo 2 caption', widget: string, required: false }
+          - name: figures
+            label: 'Photos (add as many as you like)'
+            widget: list
+            required: false
+            fields:
+              - { name: image,   label: Photo, widget: image }
+              - { name: caption, label: Caption, widget: string, required: false }
           - { name: col1, label: 'Bottom column 1', widget: text }
           - { name: col2, label: 'Bottom column 2', widget: text }
           - { name: col3, label: 'Bottom column 3', widget: text }
 
   # ====================================================================
-  #  SITE-WIDE
+  #  SITE SETTINGS (lab identity) -> _data/site.yaml
   # ====================================================================
-
-  # ---------- Site settings (lab identity) -> _data/site.yaml ----------
   - name: site
     label: 'Site settings'
     files:
@@ -141,6 +123,7 @@ collections:
               - { name: google-scholar, label: 'Google Scholar', widget: string, required: false }
               - { name: github,         label: GitHub,          widget: string, required: false }
               - { name: twitter,        label: 'Twitter / X',   widget: string, required: false }
+              - { name: linkedin,       label: LinkedIn,        widget: string, required: false }
               - { name: youtube,        label: YouTube,         widget: string, required: false }
 
   # ====================================================================
@@ -171,11 +154,11 @@ collections:
           - { label: 'Masters Student',             value: masters }
           - { label: 'Undergraduate',               value: undergrad }
           - { label: 'Research Assistant / Programmer', value: programmer }
-          - { label: 'Alumni',                      value: alumni }
+          - { label: 'Alumni (former member)',      value: alumni }
       - { name: affiliation, label: Affiliation, widget: string, required: false }
       - { name: aliases, label: 'Name aliases (for auto-matching paper authors, optional)', widget: list, required: false }
       - name: links
-        label: Links
+        label: 'Known links (icon shows only if filled)'
         widget: object
         required: false
         fields:
@@ -185,6 +168,15 @@ collections:
           - { name: google-scholar, label: 'Google Scholar', widget: string, required: false }
           - { name: github,         label: GitHub,          widget: string, required: false }
           - { name: twitter,        label: 'Twitter / X',   widget: string, required: false }
+          - { name: linkedin,       label: LinkedIn,        widget: string, required: false }
+      - name: extra_links
+        label: 'Other links (custom label + URL)'
+        widget: list
+        required: false
+        hint: 'For anything not in the list above (e.g. CIW, a personal site, a database profile). Shows a globe icon + your label.'
+        fields:
+          - { name: label, label: 'Label / description', widget: string }
+          - { name: link,  label: 'URL', widget: string }
       - { name: body, label: Bio, widget: markdown, required: false }
 
   # ---------- Blog posts -> _posts/*.md ----------
