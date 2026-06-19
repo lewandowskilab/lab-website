@@ -2,6 +2,8 @@
 # Templates read {{ site.data.content.team.* }}
 intro: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 band: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-figure1_image: images/photo.jpg
-figure2_image: images/photo.jpg
-figure3_image: images/photo.jpg
+# Bottom photo strip - add as many as you like; they wrap into a grid automatically.
+figures:
+  - images/photo.jpg
+  - images/photo.jpg
+  - images/photo.jpg
