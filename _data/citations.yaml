@@ -1,5 +1,161 @@
 # DO NOT EDIT, GENERATED AUTOMATICALLY
 
+- id: doi:10.1093/brain/awaf328
+  title: Targeting lipid droplets in FUS-linked amyotrophic lateral sclerosis mitigates
+    neuronal and astrocytic lipotoxicity
+  authors:
+  - Laetitia Marcadet
+  - Mari Carmen Pelaez
+  - Antoine Desmeules
+  - Jeanne Serrano
+  - Zhan Cheng
+  - C Sahara Khademullah
+  - Elahe Parham
+  - Jaimee Kennedy
+  - Claire Troakes
+  - Caroline Vance
+  - Jorge Soliz
+  - Heather D Durham
+  - Liang Li
+  - Paul A Dutchak
+  - Chantelle F Sephton
+  publisher: Brain
+  date: '2025-09-16'
+  link: https://doi.org/hb8h5r
+  orcid: 0000-0002-5492-1951
+  plugin: orcid.py
+  file: orcid.yaml
+- id: doi:10.1016/j.neurot.2024.e00388
+  title: Reversal of cognitive deficits in FUSR521G amyotrophic lateral sclerosis
+    mice by arimoclomol and a class I histone deacetylase inhibitor independent of
+    heat shock protein induction
+  authors:
+  - Mari Carmen Pelaez
+  - "Fr\xE9d\xE9ric Fiore"
+  - Nancy Larochelle
+  - Afrooz Dabbaghizadeh
+  - "Mario Fern\xE1ndez Comaduran"
+  - Danielle Arbour
+  - Sandra Minotti
+  - Laetitia Marcadet
+  - Martine Semaan
+  - Richard Robitaille
+  - Josephine N. Nalbantoglu
+  - Chantelle F. Sephton
+  - Heather D. Durham
+  publisher: Neurotherapeutics
+  date: '2024-09-01'
+  link: https://doi.org/g9prrv
+  orcid: 0000-0002-5492-1951
+  plugin: orcid.py
+  file: orcid.yaml
+- id: doi:10.1186/s40478-023-01671-1
+  title: "Neuronal dysfunction caused by FUSR521G promotes ALS-associated phenotypes\
+    \ that are attenuated by NF-\u03BAB inhibition"
+  authors:
+  - Mari Carmen Pelaez
+  - Antoine Desmeules
+  - Pauline A. Gelon
+  - Bastien Glasson
+  - Laetitia Marcadet
+  - Alicia Rodgers
+  - Daniel Phaneuf
+  - Silvia Pozzi
+  - Paul A. Dutchak
+  - Jean-Pierre Julien
+  - Chantelle F. Sephton
+  publisher: Acta Neuropathologica Communications
+  date: '2023-11-16'
+  link: https://doi.org/g9z42q
+  orcid: 0000-0002-5492-1951
+  plugin: orcid.py
+  file: orcid.yaml
+- id: doi:10.1186/s40478-022-01314-x
+  title: A postzygotic de novo NCDN mutation identified in a sporadic FTLD patient
+    results in neurochondrin haploinsufficiency and altered FUS granule dynamics
+  authors:
+  - "Ga\xEBl Nicolas"
+  - "Myriam S\xE9vigny"
+  - "Fran\xE7ois Lecoquierre"
+  - Florent Marguet
+  - "Andr\xE9anne Desch\xEAnes"
+  - Maria Carment del Pelaez
+  - "S\xE9bastien Feuillette"
+  - "Ana\xEFs Audebrand"
+  - Magalie Lecourtois
+  - "St\xE9phane Rousseau"
+  - Anne-Claire Richard
+  - "K\xE9vin Cassinari"
+  - Vincent Deramecourt
+  - Charles Duyckaerts
+  - Anne Boland
+  - "Jean-Fran\xE7ois Deleuze"
+  - Vincent Meyer
+  - Jordi Clarimon Echavarria
+  - Ellen Gelpi
+  - Haruhiko Akiyama
+  - Masato Hasegawa
+  - Ito Kawakami
+  - Tsz H. Wong
+  - Jeroen G. J. Van Rooij
+  - John C. Van Swieten
+  - Dominique Campion
+  - Paul A. Dutchak
+  - David Wallon
+  - Flavie Lavoie-Cardinal
+  - "Annie Laquerri\xE8re"
+  - Anne Rovelet-Lecrux
+  - Chantelle F. Sephton
+  publisher: Acta Neuropathologica Communications
+  date: '2022-02-12'
+  link: https://doi.org/gpg2bt
+  orcid: 0000-0002-5492-1951
+  plugin: orcid.py
+  file: orcid.yaml
+- id: doi:10.1523/eneuro.0317-21.2022
+  title: NPRL2 Inhibition of mTORC1 Controls Sodium Channel Expression and Brain Amino
+    Acid Homeostasis
+  authors:
+  - Jeremy B. Hui
+  - Jose Cesar Hernandez Silva
+  - Mari Carmen Pelaez
+  - "Myriam S\xE9vigny"
+  - Janani Priya Venkatasubramani
+  - Quentin Plumereau
+  - Mohamed Chahine
+  - Christophe D. Proulx
+  - Chantelle F. Sephton
+  - Paul A. Dutchak
+  publisher: eneuro
+  date: '2022-02-14'
+  link: https://doi.org/g9wbnc
+  orcid: 0000-0002-5492-1951
+  plugin: orcid.py
+  file: orcid.yaml
+- id: doi:10.1016/j.biopsych.2021.02.014
+  title: Chronic Stress Induces Sex-Specific Functional and Morphological Alterations
+    in Corticoaccumbal and Corticotegmental Pathways
+  authors:
+  - Thibault P. Bittar
+  - Mari Carmen Pelaez
+  - Jose Cesar Hernandez Silva
+  - Francis Quessy
+  - "Andr\xE9e-Anne Lavigne"
+  - "Daphn\xE9e Morency"
+  - "L\xE9a-Jeanne Blanchette"
+  - Eric Arsenault
+  - Yoan Cherasse
+  - "Jos\xE9e Seigneur"
+  - Igor Timofeev
+  - Chantelle F. Sephton
+  - Christophe D. Proulx
+  - "Benoit Labont\xE9"
+  publisher: Biological Psychiatry
+  date: '2021-08-01'
+  link: https://doi.org/hb8h5s
+  orcid: 0000-0002-5492-1951
+  plugin: orcid.py
+  file: orcid.yaml
 - id: doi:10.1371/journal.pcbi.1007128
   title: Open collaborative writing with Manubot
   authors:
