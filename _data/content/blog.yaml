@@ -1,4 +1,14 @@
-# Blog page intro. Edited via admin -> Pages -> "Blog".
-# Template reads {{ site.data.content.blog.intro }}
+# Blog page. Edited via admin -> Pages -> "Blog".
+# Template reads {{ site.data.content.blog.* }}
 # (Individual posts are edited under admin -> "Blog posts".)
 intro: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+
+# "Lab Life" gallery shown below the search box on the Blog page: a strip
+# of cover+title cards for lab activities (team-building, plant care, lab
+# chores...). The items themselves are edited under admin -> "Lab Life";
+# each opens its own page. If there are more than life_max, a "More"
+# button links to the full /life/ page.
+life_heading: Lab Life
+life_max: 3
+# Intro shown only on the full /life/ page (optional; blank = nothing).
+life_intro: ''
