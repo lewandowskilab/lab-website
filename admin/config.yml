@@ -8,7 +8,7 @@
 
 backend:
   name: github
-  repo: Yangfan9606/lab-website   # ★set to "username/repo"; update again after transfer to the lab account
+  repo: lewandowskilab/lab-website   # live repo (transferred to the lab org)
   branch: main                    # edits save to main; GitHub Actions builds and publishes to gh-pages
   # base_url: https://YOUR-AUTH-WORKER.workers.dev   # ★OAuth relay (see CMS-Guide.md section 3)
 
