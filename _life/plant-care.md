@@ -1,9 +1,9 @@
 ---
 title: Caring for the lab plants
-image: /images/IMG_3292.png
 subtitle: Lab chores
-order: 2
+image: images/photo.jpg
 date: 2026-04-02
+order: 2
 ---
 
 Whoever is on lab-chores duty for the week looks after our plants. It takes
